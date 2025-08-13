@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: krishnavi-music-bot
+    env: docker
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: SESSION_NAME
+        value: krishnavi_session
