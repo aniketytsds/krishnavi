@@ -16,7 +16,10 @@ from typing import Deque, Dict, Optional, Tuple
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pytgcalls import PyTgCalls
-from pytgcalls.types.input_stream import AudioPiped
+try:
+    from pytgcalls.types.input_stream import AudioPiped
+except ModuleNotFoundError:
+    from pytgcalls.types import AudioPiped
 from pytgcalls.exceptions import GroupCallNotFoundError, NotInGroupCallError
 import yt_dlp
 
